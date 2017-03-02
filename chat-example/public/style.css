@@ -1,0 +1,98 @@
+/* Normal size format */
+/* COLORS:
+    #EAE6E5 - platinuum
+    #8F8073 - cinereous
+    #8FCB9B - eton blue
+    #5B9279 - wintergreen dream
+    #12130F - licorice
+ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font: 13px franklin gothic, sans-serif; background: #8E7E6F; color: #12130F;
+    position: absolute; height: 100%; width: 100%;}
+form { background: #5B9279; padding: 5px; position: fixed; bottom: 0; width: 100%; }
+form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; background: #EAE6E5;}
+form button { width: 9%; background: #8ECC9C; border: none; padding: 10px; }
+#messages { list-style-type: none; margin: 0; padding: 0; }
+#messages li { padding: 5px 10px; background: #EAE6E5; font-weight: bold;}
+#messages li.svmsg { padding: 5px 10px; background: #EAE6E5; font-weight: normal; font-style: italic;}
+
+header {background-color: #5B9279; padding: 10px; position: fixed; top: 0; width: 100%;}
+h1 {color: #EAE6E5;}
+h2 {position: fixed; top: 60px; width: 100%; background-color: #8E7E6F; padding: 5px;}
+
+#main {
+    padding-top:  90px;
+    padding-bottom: 5px;
+    display: flex;
+    height: 95%;
+    flex-flow: row;
+    border: 10px solid #8E7E6F;
+}
+
+#chatbox {
+    background-color: #EAE6E5;
+    border: 5px solid #8ECC9C;
+    margin: 2px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+#userbox {
+    background-color: #EAE6E5;
+    margin: 2px;
+    margin-left: 10px;
+    width: 30%;
+    overflow-y: auto;
+    border: 5px solid #8ECC9C;
+}
+
+#users { list-style-type: none; margin: 0; padding: 0; }
+#users li { padding: 5px 10px; background: #EAE6E5;}
+#users li:nth-child(odd) { background: #DDDAD9; }
+
+/* Small format */
+@media only screen and (max-width: 768px) {
+    h2 {position: static;}
+    form input { width: 84%; margin-right: 1%;}
+    form button { width: 14%; }
+
+    #main {
+        flex-flow: column;
+        background-color: #8ECC9C;
+        border: none;
+    }
+
+    #user {
+        position: fixed;
+        top: 80px;
+    }
+
+    #userbox {
+        width: 100%;
+        margin: 0;
+        position: fixed;
+        top: 50px;
+        order: 1;
+        border: none;
+    }
+
+    #chatbox {
+        margin: 0;
+        order: 2;
+        height: 100%;
+        margin-top: 15px;
+        border: none;
+    }
+
+    #users { display: none; }
+
+    #userbox:hover #users {
+        display: list-item;
+    }
+
+    #userbox:hover #online_users {
+        background-color: #8ECC9C;
+    }
+}
+
+

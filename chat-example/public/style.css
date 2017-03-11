@@ -13,7 +13,7 @@ form { background: #5B9279; padding: 5px; position: fixed; bottom: 0; width: 100
 form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; background: #EAE6E5;}
 form button { width: 9%; background: #8ECC9C; border: none; padding: 10px; }
 #messages { list-style-type: none; margin: 0; padding: 0; }
-#messages li { padding: 5px 10px; background: #EAE6E5; font-weight: bold;}
+#messages li { padding: 5px 10px; background: #EAE6E5;}
 #messages li.svmsg { padding: 5px 10px; background: #EAE6E5; font-weight: normal; font-style: italic;}
 
 header {background-color: #5B9279; padding: 10px; position: fixed; top: 0; width: 100%;}

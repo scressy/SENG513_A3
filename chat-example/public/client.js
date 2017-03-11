@@ -41,6 +41,7 @@ $(function() {
                 timestamp = new Date();
                 time_string = "[" + timestamp.getHours() + ":" + timestamp.getMinutes() + ":" + timestamp.getSeconds() + "] ";
                 socket.emit('chat', time_string + colored_name + ": " + message);
+                $('#messages').append($('<li>').html(time_string + colored_name + ": \<b\>" + message + " \<\/b\>"));
             }
         }
         $('#m').val('');

@@ -84,7 +84,7 @@ io.on('connection', function(socket){
         if (messages.length > msg_limit) {
             messages.shift();
         }
-	    io.emit('chat', msg);
+	    socket.broadcast.emit('chat', msg);
     });
 
     //update user name
